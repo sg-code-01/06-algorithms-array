@@ -74,29 +74,57 @@
 // }}}
 // Task 4 {{{
 
-#region Task 4
+// #region Task 4
+//
+// int N = 10;
+// int M = 2000;
+//
+// for (int number = N; number < M; number++) {
+//     if (number < 0)
+//         break;
+//
+//     int original = number;
+//     int reversed = 0;
+//
+//     int num = number;
+//     while (num > 0) {
+//         int last_digit = num % 10;
+//         reversed = (reversed * 10) + last_digit;
+//         num /= 10;
+//     }
+//
+//     if (number == reversed) {
+//         Console.WriteLine(number);
+//     }
+// }
+//
+// #endregion
 
-int N = 10;
-int M = 2000;
+// }}}
+// Task 6 {{{
 
-for (int number = N; number < M; number++) {
-    if (number < 0)
-        break;
+#region Task 6
 
-    int original = number;
-    int reversed = 0;
+string text = "kərtənkələ";
+char max_letter = ' ';
+int max_count = 0;
 
-    int num = number;
-    while (num > 0) {
-        int last_digit = num % 10;
-        reversed = (reversed * 10) + last_digit;
-        num /= 10;
+for (int i = 0; i < text.Length; i++) {
+    int counter = 0;
+
+    for (int j = 0; j < text.Length; j++) {
+        if (text[i] == text[j]) {
+            counter++;
+        }
     }
 
-    if (number == reversed) {
-        Console.WriteLine(number);
+    if (counter > max_count) {
+        max_letter = text[i];
+        max_count = counter;
     }
 }
+
+Console.WriteLine($"{max_letter}: {max_count} defe");
 
 #endregion
 
