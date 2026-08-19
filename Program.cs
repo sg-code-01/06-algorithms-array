@@ -128,17 +128,50 @@
 // #endregion
 // }}}
 // Task 7 {{{
-#region Task 7
+// #region Task 7
+//
+// string text = "   salam necesen?   ";
+// string new_text = "";
+//
+// foreach (var letter in text) {
+//     if (letter != ' ')
+//         new_text += letter;
+// }
+//
+// Console.WriteLine(new_text);
+//
+// #endregion
+// }}}
+// Task 10 {{{
+#region Task 10
 
-string text = "   salam necesen?   ";
-string new_text = "";
+Console.Write("a = ");
+int num1 = int.Parse(Console.ReadLine());
+Console.Write("b = ");
+int num2 = int.Parse(Console.ReadLine());
+string operation;
+do {
+    Console.Write("Operation: ");
+    operation = Console.ReadLine();
+} while (operation != "+" && operation != "-" && operation != "*" &&
+         operation != "/");
 
-foreach (var letter in text) {
-    if (letter != ' ')
-        new_text += letter;
+switch (operation) {
+case "+":
+    Console.WriteLine($"{num1 + num2}");
+    break;
+case "-":
+    Console.WriteLine($"{num1 - num2}");
+    break;
+case "*":
+    Console.WriteLine($"{num1 * num2}");
+    break;
+case "/":
+    Console.WriteLine($"{num1 / num2}");
+    break;
+default:
+    break;
 }
-
-Console.WriteLine(new_text);
 
 #endregion
 // }}}
