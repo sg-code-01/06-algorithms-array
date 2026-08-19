@@ -102,30 +102,43 @@
 
 // }}}
 // Task 6 {{{
+// #region Task 6
+//
+// string text = "kərtənkələ";
+// char max_letter = ' ';
+// int max_count = 0;
+//
+// for (int i = 0; i < text.Length; i++) {
+//     int counter = 0;
+//
+//     for (int j = 0; j < text.Length; j++) {
+//         if (text[i] == text[j]) {
+//             counter++;
+//         }
+//     }
+//
+//     if (counter > max_count) {
+//         max_letter = text[i];
+//         max_count = counter;
+//     }
+// }
+//
+// Console.WriteLine($"{max_letter}: {max_count} defe");
+//
+// #endregion
+// }}}
+// Task 7 {{{
+#region Task 7
 
-#region Task 6
+string text = "   salam necesen?   ";
+string new_text = "";
 
-string text = "kərtənkələ";
-char max_letter = ' ';
-int max_count = 0;
-
-for (int i = 0; i < text.Length; i++) {
-    int counter = 0;
-
-    for (int j = 0; j < text.Length; j++) {
-        if (text[i] == text[j]) {
-            counter++;
-        }
-    }
-
-    if (counter > max_count) {
-        max_letter = text[i];
-        max_count = counter;
-    }
+foreach (var letter in text) {
+    if (letter != ' ')
+        new_text += letter;
 }
 
-Console.WriteLine($"{max_letter}: {max_count} defe");
+Console.WriteLine(new_text);
 
 #endregion
-
 // }}}
