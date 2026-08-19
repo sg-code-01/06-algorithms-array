@@ -48,27 +48,56 @@
 // #endregion
 // }}}
 // Task 3 {{{
-#region Task 3
+// #region Task 3
+//
+// string text = "kərtənkələ";
+// char letter = ' ';
+//
+// for (int i = 0; i < text.Length; i++) {
+//     int counter = 0;
+//
+//     for (int j = 0; j < text.Length; j++) {
+//         if (text[i] == text[j]) {
+//             counter++;
+//         }
+//     }
+//
+//     if (counter == 1) {
+//         letter = text[i];
+//         break;
+//     }
+// }
+//
+// Console.WriteLine(letter);
+//
+// #endregion
+// }}}
+// Task 4 {{{
 
-string text = "kərtənkələ";
-char letter = ' ';
+#region Task 4
 
-for (int i = 0; i < text.Length; i++) {
-    int counter = 0;
+int N = 10;
+int M = 2000;
 
-    for (int j = 0; j < text.Length; j++) {
-        if (text[i] == text[j]) {
-            counter++;
-        }
+for (int number = N; number < M; number++) {
+    if (number < 0)
+        break;
+
+    int original = number;
+    int reversed = 0;
+
+    int num = number;
+    while (num > 0) {
+        int last_digit = num % 10;
+        reversed = (reversed * 10) + last_digit;
+        num /= 10;
     }
 
-    if (counter == 1) {
-        letter = text[i];
-        break;
+    if (number == reversed) {
+        Console.WriteLine(number);
     }
 }
 
-Console.WriteLine(letter);
-
 #endregion
+
 // }}}
